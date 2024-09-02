@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends "AppCoder/inicio.html" %}
+
+    {% load static %}
+    
+    {% block contenidoQueCambia %} 
+    
+
+    <h3>Estamos Buscando a la camada numero {{camada}}</h3>
+
+    {% if Curso %}
+
+        <ul>
+            {% for cursos in Curso %}
+                <li>nombre: {{Curso.nombre}}</li>
+                <li>camada: {{Curso.camada}}</li>
+            {% endfor %}
+        </ul>
+
+    {% else %}
+        <h3>No se encontraron cursos para la camada {{camada}}.</h3>
+    
+    {% endif %}
+
+
+    {% endblock %}
+
+</body>
+</html>

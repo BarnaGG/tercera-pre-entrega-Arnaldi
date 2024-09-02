@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    {% extends "AppCoder/inicio.html" %}
+
+    {% load static %}
+    
+    {% block contenidoQueCambia %} 
+    
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+        <h1>Contacto</h1>
+        <p>Dejame tu informacion y me estare contactando contigo pronto</p>
+
+        <form method="post">
+            {% csrf_token %} 
+    
+                {{ contactFormulario.as_table }}
+                
+            <button type="submit">Enviar</button>
+        </form>
+    
+    {% endblock %}
+
+
+
+</body>
+</html>

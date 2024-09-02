@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>HOLA MUNDO DESDE PLANTILLA</h1>
+    <p>Hola, esta es nuestra primer plantilla!</p>
+
+    <p style="color:red"> Mi nombre es: {{Nombre}} </p>
+    <p style="color: green;"> Mi apellido es: {{Apellido}} </p>
+
+    <h2> Estas son mis notas de la uni: </h2>
+    <p>
+        {% for n in Notas %}
+        {{ n }}
+        <br>
+        {% endfor %}
+    </p>
+    <p>
+        {% for n in Notas %} 
+        {% if n < 4 %}
+            <p style="color: red" > Nota Mala: {{ n }}</p>
+        {% else %}
+            <p style="color: green" > Nota Buena: {{ n }}</p>
+        {% endif %}
+
+        {% endfor %}
+    </p>
+
+</body>
+</html>

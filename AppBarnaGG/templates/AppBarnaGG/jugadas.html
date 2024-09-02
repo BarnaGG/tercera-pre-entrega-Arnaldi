@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    {% extends "AppCoder/inicio.html" %}
+
+    {% load static %}
+    
+    {% block contenidoQueCambia %} 
+    
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+        <h1>Jugadas Epicas</h1>
+        <p>Envia aqui tus mejores jugadas para que pueda ponerle mi voz a esos momentos que no quieres olvidar</p>
+      
+        <form method="post">
+            {% csrf_token %} 
+    
+                {{ playsFormulario.as_table }}
+                
+            <button type="submit">Enviar</button>
+        </form>
+             
+    
+    {% endblock %}
+
+
+
+</body>
+</html>
