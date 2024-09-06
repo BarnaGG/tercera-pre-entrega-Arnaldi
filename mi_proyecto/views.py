@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.template import Template, Context # Agregamos al encabezado del archivo el import de Template y de Context
 from django.template import loader
-from AppCoder.models import Curso
+from AppBarnaGG.models import Curso
 
 def saludo(request):
     return HttpResponse("Hola Django - Coder")

@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    {% extends "AppCoder/inicio.html" %}
+    {% extends "AppBarnaGG/inicio.html" %}
 
     {% load static %}
     
@@ -16,12 +16,12 @@
 
     <h3>Estamos Buscando a la camada numero {{camada}}</h3>
 
-    {% if Curso %}
+    {% if lista_de_cursos %}
 
         <ul>
-            {% for cursos in Curso %}
-                <li>nombre: {{Curso.nombre}}</li>
-                <li>camada: {{Curso.camada}}</li>
+            {% for curso in lista_de_cursos %}
+                <li>nombre: {{curso.nombre}}</li>
+                <li>camada: {{curso.camada}}</li>
             {% endfor %}
         </ul>
 

@@ -22,7 +22,7 @@ from mi_proyecto.views import saludo, otra_vista, probando_template, agregar_cur
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('AppCoder/', include('AppCoder.urls')),
+    path('AppBarnaGG/', include('AppBarnaGG.urls')),
     path('saludo/', saludo), 
     path( 'otra_vista/', otra_vista),
     path( 'plantilla/', probando_template),

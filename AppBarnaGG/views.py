@@ -74,8 +74,8 @@ def buscar(req):
     if req.GET["camada"]:
         
         camada=req.GET['camada']
-        nombre=Curso.objects.filter(camada__icontains=camada)
-        return render(req, "AppBarnaGG/resultadosBusqueda.html", {"nombre":nombre, "camada":camada})
+        lista_de_cursos=Curso.objects.filter(camada__icontains=camada)
+        return render(req, "AppBarnaGG/resultadosBusqueda.html", {"lista_de_cursos":lista_de_cursos, "camada":camada})
     
     else:
         
